@@ -35,7 +35,18 @@ environment {
                 			
 			} 
 		}
+	 
+	 stage('DEPLOY IMAGE') {
+      agent{label 'kubernetes'}
+			steps {
+				sh 'kubectl set image deployment/tomdeploy tomcontainer="$registry:$dockerTag" --record'
+			}
+		}
+	 
+	 
+	 
 	 }
+	
 	
     }
 }
