@@ -1,5 +1,4 @@
 def call( String dregistryin = 'a', String docTag = 'a', String grepo = 'a', String gbranch = 'a') {
-
 pipeline {
 environment { 
 		registry = "$dregistryin" 	
@@ -25,8 +24,6 @@ environment {
 			    sh 'docker build -t "$registry:$dockerTag" .'
 			}
 		}
-		 
-		 
 		 stage('PUSH HUB') { 
        agent{label 'docker'}
 			 steps { 
@@ -42,11 +39,7 @@ environment {
 				sh 'kubectl set image deployment/tomdeploy tomcontainer="$registry:$dockerTag" --record'
 			}
 		}
-	 
-	 
-	 
+	
 	 }
-	
-	
     }
 }
