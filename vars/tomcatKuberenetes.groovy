@@ -11,7 +11,7 @@ environment {
 	agent none 
 	 stages {
 		stage("Checkout"){
-      agent{label 'docker1'}
+      agent{label 'docker'}
 			steps {
 			
 			    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/keerthana2022/newtestrepo.git']]])
