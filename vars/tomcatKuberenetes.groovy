@@ -25,3 +25,7 @@ environment {
 			    sh 'docker build -t "$registry:$dockerTag" .'
 			}
 		}
+	 }
+	
+    }
+}
