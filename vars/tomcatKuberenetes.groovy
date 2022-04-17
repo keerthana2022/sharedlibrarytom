@@ -19,7 +19,7 @@ environment {
 			}
 		}
 		stage("Build"){
-      agent{label 'docker1'}
+      agent{label 'docker'}
 			steps {
 			
 			    sh 'docker build -t "$registry:$dockerTag" .'
