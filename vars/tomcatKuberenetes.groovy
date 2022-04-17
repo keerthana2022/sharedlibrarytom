@@ -1,4 +1,4 @@
-def test( String dregistryin = 'a', String docTag = 'a', String grepo = 'a', String gbranch = 'a',) {
+def test( String dregistryin = 'a', String docTag = 'a', String grepo = 'a', String gbranch = 'a') {
 
 pipeline {
 environment { 
