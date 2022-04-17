@@ -15,7 +15,7 @@ environment {
 			steps {
 			
 			    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/keerthana2022/newtestrepo.git']]])
-				 //checkout([$class: 'GitSCM', branches: [[name: "$gitBranh"]], extensions: [], userRemoteConfigs: [[credentialsId: "$gitCredId", url: "$gitRepo"]]])
+				
 			}
 		}
 		stage("Build"){
