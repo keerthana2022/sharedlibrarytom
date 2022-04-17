@@ -25,6 +25,16 @@ environment {
 			    sh 'docker build -t "$registry:$dockerTag" .'
 			}
 		}
+		 
+		 
+		 stage('PUSH HUB') { 
+       agent{label 'docker'}
+			 steps { 
+				 sh 'docker push $registry:$dockerTag'
+				 
+                			
+			} 
+		}
 	 }
 	
     }
